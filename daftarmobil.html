@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+</head>
+<body>
+    
+    <div class="mobil">
+        <h2>Daftar Mobil</h2>
+        <form method="post" action=" {{ url_for('detail_mobil',mobil_id=1)}}">
+            <div class="mobilitem">
+                <img src="{{ url_for('static', filename='gambar/mobil.jpg') }}" 
+                     alt="mobil" class="mobil-img">
+                <div class="mobil-info">
+                    <h3>Mobil 1</h3>
+                    <p>Nama mobil: Daihatsu Xenia</p>
+                    <p>Tipe: MPV</p>
+                    <button type="submit" name="mobil_id" value="1" class="detail-button">Lihat Detail</button>
+                </div>
+            </div>
+        </form>
+
+        <form method="post" action=" {{ url_for('detail_mobil',mobil_id=2)}}">
+            <div class="mobilitem">
+                <img src="{{ url_for('static', filename='gambar/mobil2.jpg') }}" 
+                     alt="mobil" class="mobil-img">
+                <div class="mobil-info">
+                    <h3>Mobil 2</h3>
+                    <p>Nama mobil: Toyota Avanza</p>
+                    <p>Tipe: G13AT</p>
+                    <p>Pajak: Hidup</p>
+                    <p>Warna: Silver</p>
+                    <p>Harga: Rp 400000</p>
+                    <button type="submit" name="mobil_id" value="2" class="detail-button">Lihat Detail</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

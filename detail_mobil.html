@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Mobil</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+</head>
+<body>
+    <div class =detail>
+        <h2>Detail Mobil</h2>
+        <div class="car-detail">
+             <img src="{{ url_for('static', filename='gambar/' ~ mobil['gambar']) }}" 
+                alt="mobil" class="car-img">
+                     <div class="car-info">
+                        <h3>{{ mobil['nama'] }}</h3>
+                        <p>Nama mobil: {{ mobil['nama'] }}</p>
+                        <p>Tipe: {{ mobil['tipe'] }}</p>
+                        <p>Pajak: {{ mobil['Pajak'] }}</p>
+                        <p>Warna: {{ mobil['Warna'] }}</p>
+                        <p>Harga Sewa: {{ mobil['Harga Sewa'] }}</p>
+            </div>
+        </div>
+    
+        <form method="post">
+             <button type="submit" name="action" value="selanjutnya">Selanjutnya</button>
+             <button type="submit" name="action" value="batal">Batal</button>
+        </form>
+    </div>
+</body>
+</html>
